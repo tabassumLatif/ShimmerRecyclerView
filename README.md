@@ -1,6 +1,9 @@
 # ShimmerRecyclerView
 Shimmer effect in RecyclerView
 
+# Sample
+![Alt text](https://raw.githubusercontent.com/tabassumLatif/ShimmerRecyclerView/master/sample.gif?raw=true "Sample")
+
 # Download
 
 Or use Gradle:
