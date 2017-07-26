@@ -31,7 +31,7 @@ public class ShimmerRecyclerView extends RecyclerView {
     private int mLayoutReference = 0;
     private boolean mCanScroll;
     private LayoutMangerType mLayoutMangerType = LayoutMangerType.LINEAR_VERTICAL;
-    private int mGridCount = 2;
+    private int mGridCount = 1;
 
     public ShimmerRecyclerView(Context context) {
         super(context);
