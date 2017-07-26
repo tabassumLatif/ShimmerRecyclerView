@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
-        rvImages.setLayoutManager(mLayoutManager);
+        rvImages.setLayoutManager(mLayoutManager, 2);
+//        rvImages.setMinItemCount();
         rvImages.addItemDecoration(new GridSpacingItemDecoration(3, dpToPx(10), false));
         rvImages.setItemAnimator(new DefaultItemAnimator());
         rvImages.setDrawingCacheEnabled(true);
         rvImages.setAdapter(new ImagesAdapter(this, getImage()));
         rvImages.showShimmerAdapter();
+//        rvImages.setGridChildCount(2);
 
         rvImages.postDelayed(new Runnable() {
             @Override

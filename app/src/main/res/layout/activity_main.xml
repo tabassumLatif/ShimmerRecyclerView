@@ -12,6 +12,7 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        app:demo_layout="@layout/item_image_shimmer_view"
+
        app:demo_layout_manager_type="grid"/>
 
 </LinearLayout>

@@ -19,6 +19,8 @@ public class ShimmerRecyclerView extends RecyclerView {
         LINEAR_VERTICAL, LINEAR_HORIZONTAL, GRID
     }
 
+
+
     private ShimmerAdapter mShimmerAdapter;
     private LayoutManager mShimmerLayoutManager;
 
@@ -78,7 +80,7 @@ public class ShimmerRecyclerView extends RecyclerView {
             }
 
             if (a.hasValue(R.styleable.ShimmerRecyclerView_demo_grid_child_count)) {
-                setGridChildCount(a.getInteger(R.styleable.ShimmerRecyclerView_demo_grid_child_count, 2));
+                setGridChildCount(a.getInteger(R.styleable.ShimmerRecyclerView_demo_grid_child_count, mGridCount));
             }
 
         } finally {
@@ -97,6 +99,14 @@ public class ShimmerRecyclerView extends RecyclerView {
      */
     public void setGridChildCount(int count) {
         mGridCount = count;
+        mShimmerAdapter.setMinItemCount(count);
+        if (mShimmerLayoutManager == null) {
+            initShimmerManager();
+        }
+
+        setLayoutManager(mShimmerLayoutManager);
+        setAdapter(mShimmerAdapter);
+
     }
 
     /**
@@ -115,6 +125,7 @@ public class ShimmerRecyclerView extends RecyclerView {
      * @param count - number of demo views should be shown.
      */
     public void setDemoChildCount(int count) {
+
         mShimmerAdapter.setMinItemCount(count);
     }
 
@@ -174,6 +185,23 @@ public class ShimmerRecyclerView extends RecyclerView {
 
     public void setLayoutManager(LayoutManager manager) {
 
+        if (manager == null) {
+            mActualLayoutManager = null;
+        } else if (manager != mShimmerLayoutManager) {
+            mActualLayoutManager = manager;
+        }
+
+        super.setLayoutManager(manager);
+    }
+
+    public void setLayoutManager(LayoutManager manager, int count) {
+        mShimmerLayoutManager = new GridLayoutManager(getContext(), count) {
+            public boolean canScrollVertically() {
+                return mCanScroll;
+            }
+        };
+        mGridCount = count;
+        mShimmerAdapter.setMinItemCount(count);
         if (manager == null) {
             mActualLayoutManager = null;
         } else if (manager != mShimmerLayoutManager) {
