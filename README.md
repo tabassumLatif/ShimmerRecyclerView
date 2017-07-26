@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
   compile 'com.android.support:support-v4:25.3.1'
-  compile 'com.github.tabassumLatif:ShimmerRecyclerView:0.1.0'
+  compile 'com.github.tabassumLatif:ShimmerRecyclerView:0.1.2'
 }
 ```
 
