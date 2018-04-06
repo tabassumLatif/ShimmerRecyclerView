@@ -174,8 +174,8 @@ public class ShimmerFrameLayout extends FrameLayout {
                 if (a.hasValue(R.styleable.ShimmerFrameLayout_base_alpha)) {
                     setBaseAlpha(a.getFloat(R.styleable.ShimmerFrameLayout_base_alpha, 0));
                 }
-                if (a.hasValue(R.styleable.ShimmerFrameLayout_duration)) {
-                    setDuration(a.getInt(R.styleable.ShimmerFrameLayout_duration, 0));
+                if (a.hasValue(R.styleable.ShimmerFrameLayout_shimmer_duration)) {
+                    setDuration(a.getInt(R.styleable.ShimmerFrameLayout_shimmer_duration, 0));
                 }
                 if (a.hasValue(R.styleable.ShimmerFrameLayout_repeat_count)) {
                     setRepeatCount(a.getInt(R.styleable.ShimmerFrameLayout_repeat_count, 0));

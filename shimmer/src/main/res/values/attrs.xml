@@ -60,7 +60,7 @@
     <declare-styleable name="ShimmerFrameLayout">
         <attr name="auto_start" format="boolean"/>
         <attr name="base_alpha" format="float"/>
-        <attr name="duration" format="integer"/>
+        <attr name="shimmer_duration" format="integer"/>
         <attr name="repeat_count" format="integer"/>
         <attr name="repeat_delay" format="integer"/>
         <attr name="repeat_mode" format="enum">
