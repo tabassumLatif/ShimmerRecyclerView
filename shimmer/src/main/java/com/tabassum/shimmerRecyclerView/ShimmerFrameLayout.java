@@ -206,8 +206,8 @@ public class ShimmerFrameLayout extends FrameLayout {
                     }
                 }
 
-                if (a.hasValue(R.styleable.ShimmerFrameLayout_shape)) {
-                    int shape = a.getInt(R.styleable.ShimmerFrameLayout_shape, 0);
+                if (a.hasValue(R.styleable.ShimmerFrameLayout_item_shape)) {
+                    int shape = a.getInt(R.styleable.ShimmerFrameLayout_item_shape, 0);
                     switch (shape) {
                         default:
                         case 0:

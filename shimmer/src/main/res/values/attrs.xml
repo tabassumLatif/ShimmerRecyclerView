@@ -79,7 +79,7 @@
         <attr name="intensity" format="float"/>
         <attr name="relative_width" format="float"/>
         <attr name="relative_height" format="float"/>
-        <attr name="shape" format="enum">
+        <attr name="item_shape" format="enum">
             <enum name="linear" value="0"/>
             <enum name="radial" value="1" />
         </attr>
