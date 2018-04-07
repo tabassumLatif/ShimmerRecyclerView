@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:angle="cw_0"
-    app:shape="linear"
+    app:item_shape="linear"
     app:base_alpha="0.85"
-    app:duration="1000"
+    app:shimmer_duration="1000"
     app:tilt="5"
 
     />
